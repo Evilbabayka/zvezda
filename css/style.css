@@ -1,22 +1,160 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
- */
 html {
-  font-family: sans-serif;
-  /* 1 */
+  font-family: 'Montserrat', sans-serif;
   -ms-text-size-adjust: 100%;
-  /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  box-sizing: border-box;
+}
 
-/**
- * Remove default margin.
- */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
-  margin: 0; }
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+/* Links */
+a, .underline, .dashed, .dotted {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:active, .underline:active, .dashed:active, .dotted:active,
+a:hover, .underline:hover, .dashed:hover, .dotted:hover {
+  outline: 0;
+  color: #e31e24;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p { margin: 0 0 1rem; }
+
+/* Forms */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+[class*="col-"] {
+  position: relative;
+  width: 100%;
+  padding: 0 15px;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .row {
+    margin: 0 -10px;
+  }
+  
+  [class*="col-"] {
+    padding: 0 10px;
+  }
+}
+
 .jq-checkbox {cursor:pointer;}
 .jq-radio {cursor:pointer;}
 
@@ -380,138 +518,11 @@ iframe {
   display: none !important;
   -webkit-appearance: none; }
 
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTCondMediumObl.eot");
-  src: url("../fonts/FuturaPTCondMediumObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTCondMediumObl.woff2") format("woff2"), url("../fonts/FuturaPTCondMediumObl.woff") format("woff");
-  font-weight: 500;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTExtraBoldObl.eot");
-  src: url("../fonts/FuturaPTExtraBoldObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTExtraBoldObl.woff2") format("woff2"), url("../fonts/FuturaPTExtraBoldObl.woff") format("woff");
-  font-weight: 800;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTBookObl.eot");
-  src: url("../fonts/FuturaPTBookObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTBookObl.woff2") format("woff2"), url("../fonts/FuturaPTBookObl.woff") format("woff");
-  font-weight: normal;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTCondExtraBold.eot");
-  src: url("../fonts/FuturaPTCondExtraBoldd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTCondExtraBold.woff2") format("woff2"), url("../fonts/FuturaPTCondExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTBook.eot");
-  src: url("../fonts/FuturaPTBookd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTBook.woff2") format("woff2"), url("../fonts/FuturaPTBook.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTCondExtraBoldObl.eot");
-  src: url("../fonts/FuturaPTCondExtraBoldObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTCondExtraBoldObl.woff2") format("woff2"), url("../fonts/FuturaPTCondExtraBoldObl.woff") format("woff");
-  font-weight: 800;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTDemi.eot");
-  src: url("../fonts/FuturaPTDemid41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTDemi.woff2") format("woff2"), url("../fonts/FuturaPTDemi.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTCondMedium.eot");
-  src: url("../fonts/FuturaPTCondMediumd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTCondMedium.woff2") format("woff2"), url("../fonts/FuturaPTCondMedium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTDemiObl.eot");
-  src: url("../fonts/FuturaPTDemiObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTDemiObl.woff2") format("woff2"), url("../fonts/FuturaPTDemiObl.woff") format("woff");
-  font-weight: normal;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTCondBold.eot");
-  src: url("../fonts/FuturaPTCondBoldd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTCondBold.woff2") format("woff2"), url("../fonts/FuturaPTCondBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTCondBook.eot");
-  src: url("../fonts/FuturaPTCondBookd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTCondBook.woff2") format("woff2"), url("../fonts/FuturaPTCondBook.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTHeavyObl.eot");
-  src: url("../fonts/FuturaPTHeavyObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTHeavyObl.woff2") format("woff2"), url("../fonts/FuturaPTHeavyObl.woff") format("woff");
-  font-weight: 900;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTCondBookObl.eot");
-  src: url("../fonts/FuturaPTCondBookObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTCondBookObl.woff2") format("woff2"), url("../fonts/FuturaPTCondBookObl.woff") format("woff");
-  font-weight: normal;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTCondBoldObl.eot");
-  src: url("../fonts/FuturaPTCondBoldObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTCondBoldObl.woff2") format("woff2"), url("../fonts/FuturaPTCondBoldObl.woff") format("woff");
-  font-weight: bold;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTLight.eot");
-  src: url("../fonts/FuturaPTLightd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTLight.woff2") format("woff2"), url("../fonts/FuturaPTLight.woff") format("woff");
-  font-weight: 300;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTMedium.eot");
-  src: url("../fonts/FuturaPTMediumd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTMedium.woff2") format("woff2"), url("../fonts/FuturaPTMedium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTHeavy.eot");
-  src: url("../fonts/FuturaPTHeavyd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTHeavy.woff2") format("woff2"), url("../fonts/FuturaPTHeavy.woff") format("woff");
-  font-weight: 900;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTLightObl.eot");
-  src: url("../fonts/FuturaPTLightObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTLightObl.woff2") format("woff2"), url("../fonts/FuturaPTLightObl.woff") format("woff");
-  font-weight: 300;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTBold.eot");
-  src: url("../fonts/FuturaPTBoldd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTBold.woff2") format("woff2"), url("../fonts/FuturaPTBold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTBoldObl.eot");
-  src: url("..fonts/FuturaPTBoldObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTBoldObl.woff2") format("woff2"), url("../fonts/FuturaPTBoldObl.woff") format("woff");
-  font-weight: bold;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTMediumObl.eot");
-  src: url("../fonts/FuturaPTMediumObld41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTMediumObl.woff2") format("woff2"), url("../fonts/FuturaPTMediumObl.woff") format("woff");
-  font-weight: 500;
-  font-style: italic; }
-@font-face {
-  font-family: 'Futura';
-  src: url("../fonts/FuturaPTExtraBold.eot");
-  src: url("../fonts/FuturaPTExtraBoldd41d.eot") format("embedded-opentype"), url("../fonts/FuturaPTExtraBold.woff2") format("woff2"), url("../fonts/FuturaPTExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal; }
+/* Use Google Fonts Montserrat instead of local files */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
 @media all and (max-width: 750px) {
   .hidden-xs {
     display: none !important; } }
@@ -1921,7 +1932,7 @@ iframe {
 html {
   color: #000;
   background: #fff;
-  font: 16px/24px 'Futura';
+  font: 16px/24px 'Montserrat';
   width: 100%;
   min-width: 1120px;
   max-width: 100%;
@@ -2319,7 +2330,7 @@ input[type=tel], textarea {
   height: 64px;
   border: 2px solid #1b1b1b;
   color: #1b1b1b;
-  font: 500 18px/64px "Futura";
+  font: 500 18px/64px "Montserrat";
   margin-bottom: 30px; }
   @media all and (max-width: 750px) {
     input[type=text], input[type=email],
@@ -2695,7 +2706,7 @@ textarea {
         display: block;
         margin-bottom: 60px; }
       .global-nav ul.nav a, .global-nav ul.nav .underline, .global-nav ul.nav .dashed, .global-nav ul.nav .dotted {
-        font: 900 32px/32px 'Futura', sans-serif;
+        font: 900 32px/32px 'Montserrat', sans-serif;
         width: auto;
         text-transform: uppercase;
         color: #1b1b1b !important; }
@@ -3015,11 +3026,11 @@ textarea {
       display: inline-block;
       vertical-align: top;
       margin-top: 6px;
-      font: 600 30px/30px "Futura";
+      font: 600 30px/30px "Montserrat";
       text-transform: uppercase; }
       .layout-header .logo .logo-text span {
         text-transform: none;
-        font: 400 20px/20px "Futura";
+        font: 400 20px/20px "Montserrat";
         display: block; }
   .layout-header .si-phone {
     display: inline-block; }
@@ -3045,7 +3056,7 @@ textarea {
     .layout-header .menu-nav a, .layout-header .menu-nav .underline, .layout-header .menu-nav .dashed, .layout-header .menu-nav .dotted {
       display: inline-block;
       color: #333333 !important;
-      font: 500 20px/20px "Futura";
+      font: 500 20px/20px "Montserrat";
       position: relative; }
       .layout-header .menu-nav a:after, .layout-header .menu-nav .underline:after, .layout-header .menu-nav .dashed:after, .layout-header .menu-nav .dotted:after {
         content: '';
@@ -3099,11 +3110,11 @@ textarea {
       display: inline-block;
       vertical-align: top;
       margin-top: 6px;
-      font: 600 30px/30px "Futura";
+      font: 600 30px/30px "Montserrat";
       text-transform: uppercase; }
       .layout-footer .logo .logo-text span {
         text-transform: none;
-        font: 400 20px/20px "Futura";
+        font: 400 20px/20px "Montserrat";
         display: block; }
   .layout-footer .logo-block {
     width: 100%;
@@ -3127,14 +3138,14 @@ textarea {
       display: block;
       color: #1b1b1b;
       text-transform: uppercase;
-      font: 600 22px/22px "Futura";
+      font: 600 22px/22px "Montserrat";
       vertical-align: top;
       margin-top: 20px; }
     .layout-footer .logo-block .logo-text {
       width: 90px;
       display: block;
       color: #7f7f7f;
-      font: 500 14px/14px "Futura";
+      font: 500 14px/14px "Montserrat";
       position: relative;
       vertical-align: top; }
       @media all and (max-width: 750px) {
@@ -3145,7 +3156,7 @@ textarea {
     margin: 16px auto 0;
     display: block;
     color: #1b1b1b;
-    font: 300 18px/24px "Futura"; }
+    font: 300 18px/24px "Montserrat"; }
     @media all and (max-width: 750px) {
       .layout-footer .footer-text {
         float: right;
@@ -3177,7 +3188,7 @@ textarea {
       width: 135px;
       position: relative;
       color: #1b1b1b;
-      font: 500 18px/24px "Futura";
+      font: 500 18px/24px "Montserrat";
       margin-bottom: 30px; }
       @media all and (max-width: 750px) {
         .layout-footer .si-phone .phone-link {
@@ -3194,14 +3205,14 @@ textarea {
         left: -25px; }
     .layout-footer .si-phone .si-phone-text {
       color: #1b1b1b;
-      font: 300 18px/24px "Futura";
+      font: 300 18px/24px "Montserrat";
       margin-top: 29px; }
       @media all and (max-width: 750px) {
         .layout-footer .si-phone .si-phone-text {
           margin-top: -40px; } }
     .layout-footer .si-phone .mail {
       color: #d9716f;
-      font: 500 18px/24px "Futura";
+      font: 500 18px/24px "Montserrat";
       position: relative;
       width: 150px;
       text-decoration: underline; }
@@ -3217,7 +3228,7 @@ textarea {
 .link {
   display: block;
   margin-top: 30px;
-  font: 500 14px/14px "Futura";
+  font: 500 14px/14px "Montserrat";
   text-decoration: underline; }
   @media all and (max-width: 750px) {
     .link {
@@ -3227,7 +3238,7 @@ textarea {
 
 .red-link {
   color: #d9716f;
-  font: 500 14px/14px "Futura";
+  font: 500 14px/14px "Montserrat";
   text-decoration: underline;
   display: block;
   margin-bottom: 10px;
@@ -3235,13 +3246,13 @@ textarea {
 
 .copy-right {
   color: #1b1b1b;
-  font: 500 18px/18px "Futura";
+  font: 500 18px/18px "Montserrat";
   display: block;
   margin-bottom: 10px; }
 
 .last {
   color: #1b1b1b;
-  font: 500 14px/14px "Futura"; }
+  font: 500 14px/14px "Montserrat"; }
 
 html.si-lock {
   overflow: hidden !important; }
@@ -3329,23 +3340,23 @@ html.si-lock2 {
 .modal-form-title, .si-success-modal-title {
   text-align: left;
   color: #1b1b1b;
-  font: 500 60px/60px "Futura";
+  font: 500 60px/60px "Montserrat";
   margin-bottom: 40px; }
 
 .modal-time, .success-time {
   text-align: left;
   color: #1b1b1b;
-  font: 500 24px/26px "Futura";
+  font: 500 24px/26px "Montserrat";
   margin-bottom: 50px; }
   .modal-time span, .success-time span {
-    font: 600 26px/26px "Futura"; }
+    font: 600 26px/26px "Montserrat"; }
   @media all and (max-width: 750px) {
     .modal-time input, .success-time input {
       width: 100%; } }
 
 .modal-text-block {
   color: #1b1b1b;
-  font: 500 20px/23px "Futura";
+  font: 500 20px/23px "Montserrat";
   margin-bottom: 10px;
   text-align: left; }
   .modal-text-block li {
@@ -3436,7 +3447,7 @@ html.si-lock2 {
   width: 100%;
   height: 100%;
   vertical-align: middle;
-  font: 500 60px/60px "Futura"; }
+  font: 500 60px/60px "Montserrat"; }
 
 [class*="section-"] {
   position: relative;
@@ -3454,7 +3465,7 @@ html.si-lock2 {
   background-color: #d9716f;
   text-align: center;
   color: #fff !important;
-  font: 500 16px/80px "Futura";
+  font: 500 16px/80px "Montserrat";
   text-transform: uppercase;
   letter-spacing: 1.6px;
   -webkit-box-sizing: border-box;
@@ -3503,7 +3514,7 @@ html.si-lock2 {
     width: 720px;
     display: block;
     color: #1b1b1b;
-    font: 500 80px/65px "Futura";
+    font: 500 80px/65px "Montserrat";
     margin-bottom: 43px; }
     @media all and (max-width: 750px) {
       .section-heading h1 {
@@ -3512,7 +3523,7 @@ html.si-lock2 {
   .section-heading .sub_title {
     width: 600px;
     color: #000000;
-    font: 500 22px/30px "Futura";
+    font: 500 22px/30px "Montserrat";
     margin-bottom: 75px; }
     @media all and (max-width: 750px) {
       .section-heading .sub_title {
@@ -3579,13 +3590,13 @@ html.si-lock2 {
       .section-heading .header-block .header-right .header-title {
         display: block;
         color: #1b1b1b;
-        font: 500 24px/24px "Futura";
+        font: 500 24px/24px "Montserrat";
         margin-bottom: 10px; }
       .section-heading .header-block .header-right .header-text {
         width: 170px;
         display: block;
         color: #7f7f7f;
-        font: 500 18px/24px "Futura"; }
+        font: 500 18px/24px "Montserrat"; }
         @media all and (max-width: 750px) {
           .section-heading .header-block .header-right .header-text {
             width: 100%; } }
@@ -3627,7 +3638,7 @@ html.si-lock2 {
     width: 1000px;
     display: block;
     color: #1b1b1b;
-    font: 500 90px/80px "Futura";
+    font: 500 90px/80px "Montserrat";
     margin-bottom: 36px; }
     @media all and (max-width: 1220px) {
       .section-trust h2 {
@@ -3650,7 +3661,7 @@ html.si-lock2 {
     width: 647px;
     display: block;
     color: #333333;
-    font: 500 24px/36px "Futura";
+    font: 500 24px/36px "Montserrat";
     margin-bottom: 160px; }
     @media all and (max-width: 750px) {
       .section-trust .sub_title {
@@ -3659,7 +3670,7 @@ html.si-lock2 {
   .section-trust .trust-title {
     width: 485px;
     color: #1b1b1b;
-    font: 500 48px/48px "Futura";
+    font: 500 48px/48px "Montserrat";
     margin-left: 100px;
     margin-bottom: 62px; }
     @media all and (max-width: 750px) {
@@ -3702,20 +3713,20 @@ html.si-lock2 {
       width: 230px;
       display: block;
       color: #1b1b1b;
-      font: 500 20px/24px "Futura"; }
+      font: 500 20px/24px "Montserrat"; }
       @media all and (max-width: 750px) {
         .section-trust .trust-block .trust-text {
           width: 100%; } }
   .section-trust .example-text {
     color: #1b1b1b;
-    font: 500 48px/48px "Futura";
+    font: 500 48px/48px "Montserrat";
     margin-bottom: 80px; }
     @media all and (max-width: 750px) {
       .section-trust .example-text {
         margin-top: 90px; } }
   .section-trust .example-small-text {
     color: #1b1b1b;
-    font: 500 20px/20px "Futura";
+    font: 500 20px/20px "Montserrat";
     margin-bottom: 27px; }
     .section-trust .example-small-text.i-1 {
       margin-left: 120px; }
@@ -3724,11 +3735,11 @@ html.si-lock2 {
           margin-left: 0; } }
   .section-trust .example-red-text {
     color: #d9716f;
-    font: 300 90px/90px "Futura";
+    font: 300 90px/90px "Montserrat";
     margin-bottom: 54px;
     position: relative; }
     .section-trust .example-red-text span {
-      font: 500 24px/30px "Futura";
+      font: 500 24px/30px "Montserrat";
       position: absolute;
       top: 15px;
       right: 47px; }
@@ -3745,7 +3756,7 @@ html.si-lock2 {
     display: block;
     position: relative;
     color: #1b1b1b;
-    font: 500 24px/24px "Futura";
+    font: 500 24px/24px "Montserrat";
     margin-left: 90px;
     background-color: #fff;
     text-align: center; }
@@ -3758,19 +3769,19 @@ html.si-lock2 {
   .section-trust .example-red-big {
     margin-top: 35px;
     color: #d9716f;
-    font: 300 150px/150px "Futura"; }
+    font: 300 150px/150px "Montserrat"; }
     @media all and (max-width: 750px) {
       .section-trust .example-red-big {
-        font: 300 110px/110px "Futura"; } }
+        font: 300 110px/110px "Montserrat"; } }
   .section-trust .desc-text {
     color: #333333;
-    font: 300 18px/18px "Futura";
+    font: 300 18px/18px "Montserrat";
     margin-bottom: 44px;
     margin-top: 96px; }
     .section-trust .desc-text span {
       display: block;
       color: #333333;
-      font: 500 24px/24px "Futura";
+      font: 500 24px/24px "Montserrat";
       margin-top: 10px; }
   .section-trust .red-button {
     width: 448px; }
@@ -3783,7 +3794,7 @@ html.si-lock2 {
     width: 614px;
     display: inline-block;
     color: #1b1b1b;
-    font: 500 48px/48px "Futura";
+    font: 500 48px/48px "Montserrat";
     margin-bottom: 80px; }
     @media all and (max-width: 750px) {
       .section-bankrupt h3 {
@@ -3793,7 +3804,7 @@ html.si-lock2 {
     display: inline-block;
     float: right;
     color: #1b1b1b;
-    font: 500 20px/24px "Futura"; }
+    font: 500 20px/24px "Montserrat"; }
     @media all and (max-width: 750px) {
       .section-bankrupt .desc-title {
         display: none; } }
@@ -3802,7 +3813,7 @@ html.si-lock2 {
     .section-bankrupt .desc-title .sub {
       margin-top: 30px;
       color: #7f7f7f;
-      font: 500 14px/18px "Futura"; }
+      font: 500 14px/18px "Montserrat"; }
   .section-bankrupt .question-item.active {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -3841,7 +3852,7 @@ html.si-lock2 {
     .section-bankrupt .question .question-text {
       display: block;
       width: 100%;
-      font: 500 24px/24px "Futura"; }
+      font: 500 24px/24px "Montserrat"; }
       @media all and (max-width: 750px) {
         .section-bankrupt .question .question-text {
           width: 80%; } }
@@ -3876,7 +3887,7 @@ html.si-lock2 {
     margin-top: 45px;
     margin-bottom: 38px;
     color: #1b1b1b;
-    font: 500 20px/24px "Futura"; }
+    font: 500 20px/24px "Montserrat"; }
     @media all and (max-width: 1220px) {
       .section-bankrupt .answer {
         width: 100%; } }
@@ -3884,24 +3895,24 @@ html.si-lock2 {
     margin-top: 120px;
     color: #d9706e;
     text-transform: uppercase;
-    font: 500 90px/90px "Futura";
+    font: 500 90px/90px "Montserrat";
     margin-bottom: 40px; }
     @media all and (max-width: 750px) {
       .section-bankrupt .red-title {
-        font: 500 74px/74px "Futura";
+        font: 500 74px/74px "Montserrat";
         margin-bottom: 50px; } }
   .section-bankrupt .black-text {
     width: 1100px;
     display: block;
     color: #1b1b1b;
-    font: 500 48px/60px "Futura"; }
+    font: 500 48px/60px "Montserrat"; }
     @media all and (max-width: 750px) {
       .section-bankrupt .black-text {
         width: 100%; } }
     .section-bankrupt .black-text span {
       display: block;
       margin-top: 40px;
-      font: 500 24px/24px "Futura"; }
+      font: 500 24px/24px "Montserrat"; }
   .section-bankrupt .arm-img {
     position: absolute;
     right: -13%;
@@ -3918,11 +3929,11 @@ html.si-lock2 {
   padding-bottom: 300px; }
   .section-payment h2 {
     color: #1b1b1b;
-    font: 500 60px/60px "Futura";
+    font: 500 60px/60px "Montserrat";
     margin-bottom: 50px; }
   .section-payment .sub_title {
     color: #1b1b1b;
-    font: 500 36px/36px "Futura";
+    font: 500 36px/36px "Montserrat";
     margin-bottom: 85px; }
     @media all and (max-width: 750px) {
       .section-payment .sub_title {
@@ -3960,10 +3971,10 @@ html.si-lock2 {
       top: -37px;
       left: 73%;
       color: #1b1b1b;
-      font: 500 48px/48px "Futura";
+      font: 500 48px/48px "Montserrat";
       vertical-align: top; }
     .section-payment .payment-container .after-eight {
-      font: 300 90px/90px "Futura";
+      font: 300 90px/90px "Montserrat";
       position: absolute;
       margin-left: 47px;
       top: -55px;
@@ -3972,7 +3983,7 @@ html.si-lock2 {
         .section-payment .payment-container .after-eight {
           right: -25px; } }
       .section-payment .payment-container .after-eight span {
-        font: 500 48px/48px "Futura";
+        font: 500 48px/48px "Montserrat";
         position: absolute;
         display: block;
         top: 15px;
@@ -3986,17 +3997,17 @@ html.si-lock2 {
     .section-payment .payment-container .slide-title,
     .section-payment .payment-container .total-text {
       color: #1b1b1b;
-      font: 500 60px/60px "Futura";
+      font: 500 60px/60px "Montserrat";
       margin-bottom: 28px; }
       .section-payment .payment-container .slide-title.mini,
       .section-payment .payment-container .total-text.mini {
-        font: 500 40px/40px "Futura"; }
+        font: 500 40px/40px "Montserrat"; }
     .section-payment .payment-container .result-block {
       display: block; }
     .section-payment .payment-container .result {
       color: #d9706e;
       text-transform: uppercase;
-      font: 500 50px/50px "Futura";
+      font: 500 50px/50px "Montserrat";
       margin-bottom: 20px;
       display: inline-block; }
     .section-payment .payment-container .input-block {
@@ -4021,22 +4032,22 @@ html.si-lock2 {
     .section-payment .payment-container .ruble {
       display: inline-block;
       color: #d9706e;
-      font: 500 90px/90px "Futura";
+      font: 500 90px/90px "Montserrat";
       margin-left: 15px; }
     .section-payment .payment-container .sub-total {
       color: #1b1b1b;
-      font: 300 20px/20px "Futura";
+      font: 300 20px/20px "Montserrat";
       margin-bottom: 30px; }
     .section-payment .payment-container .sub_title-slide {
       color: #1b1b1b;
-      font: 300 20px/20px "Futura";
+      font: 300 20px/20px "Montserrat";
       margin-bottom: 30px; }
     .section-payment .payment-container .calc__group--input {
       width: 300px;
       display: inline-block;
       position: relative;
       color: #1b1b1b;
-      font: 500 24px/24px "Futura";
+      font: 500 24px/24px "Montserrat";
       padding-left: 40px;
       vertical-align: top;
       margin-bottom: 15px; }
@@ -4109,35 +4120,35 @@ html.si-lock2 {
     top: -11%;
     left: 70%;
     color: #1b1b1b;
-    font: 500 48px/48px "Futura";
+    font: 500 48px/48px "Montserrat";
     vertical-align: top; }
     @media all and (max-width: 750px) {
       .section-payment .payment-pagination {
         top: -5%;
         left: 63%; } }
     .section-payment .payment-pagination .swiper-pagination-current {
-      font: 500 48px/48px "Futura";
+      font: 500 48px/48px "Montserrat";
       position: absolute;
       left: 58px; }
       .section-payment .payment-pagination .swiper-pagination-current:after {
         content: '0';
         display: block;
         position: absolute;
-        font: 500 48px/48px "Futura";
+        font: 500 48px/48px "Montserrat";
         top: 0;
-        left: -23px; }
+        left: -35px; }
     .section-payment .payment-pagination .swiper-pagination-total {
-      font: 300 90px/90px "Futura";
+      font: 300 90px/90px "Montserrat";
       position: absolute;
-      margin-left: 47px;
+      margin-left: 55px;
       top: -10px; }
       .section-payment .payment-pagination .swiper-pagination-total:after {
         content: '0';
         display: block;
         position: absolute;
-        font: 300 90px/90px "Futura";
+        font: 300 90px/90px "Montserrat";
         top: 0;
-        left: -48px; }
+        left: -56px; }
   .section-payment .paymanet-button {
     width: 60px;
     height: 60px;
@@ -4165,12 +4176,12 @@ html.si-lock2 {
     .section-payment .paymanet-button span {
       display: inline-block;
       color: #1b1b1b;
-      font: 500 24px/24px "Futura";
+      font: 500 24px/24px "Montserrat";
       vertical-align: top;
       margin-left: 70px;
       margin-top: 16px; }
     .section-payment .paymanet-button .margin {
-      margin-left: -70px; }
+      margin-left: -100px; }
   .section-payment .swiper-button-prev, .section-payment .swiper-button-next {
     top: 110%;
     left: 25%; }
@@ -4199,7 +4210,7 @@ html.si-lock2 {
   .section-work h2 {
     width: 670px;
     color: #1b1b1b;
-    font: 500 60px/60px "Futura";
+    font: 500 60px/60px "Montserrat";
     margin-bottom: 40px; }
     @media all and (max-width: 750px) {
       .section-work h2 {
@@ -4207,7 +4218,7 @@ html.si-lock2 {
   .section-work .sub_title {
     width: 620px;
     color: #333333;
-    font: 500 24px/36px "Futura";
+    font: 500 24px/36px "Montserrat";
     margin-bottom: 66px; }
     @media all and (max-width: 750px) {
       .section-work .sub_title {
@@ -4248,16 +4259,16 @@ html.si-lock2 {
     .section-work .work-block .work-number,
     .section-work .work-red-block .work-number {
       color: #d9716f;
-      font: 300 18px/18px "Futura";
+      font: 300 18px/18px "Montserrat";
       margin-bottom: 55px; }
     .section-work .work-block .work-text,
     .section-work .work-red-block .work-text {
       color: #333333;
-      font: 500 24px/30px "Futura"; }
+      font: 500 24px/30px "Montserrat"; }
     .section-work .work-block .work-title,
     .section-work .work-red-block .work-title {
       color: #d9716f;
-      font: 500 36px/36px "Futura";
+      font: 500 36px/36px "Montserrat";
       margin-top: 30px; }
   .section-work .work-red-block {
     padding: 50px;
@@ -4279,7 +4290,7 @@ html.si-lock2 {
       left: 50px;
       bottom: 50px;
       color: #ffffff;
-      font: 500 36px/36px "Futura"; }
+      font: 500 36px/36px "Montserrat"; }
     .section-work .work-red-block:hover {
       border: 10px solid #d9716f;
       background-color: #fff; }
@@ -4308,7 +4319,7 @@ html.si-lock2 {
     .section-stages .time-block .time-number {
       display: inline-block;
       color: #d9716f;
-      font: 500 90px/90px "Futura";
+      font: 500 90px/90px "Montserrat";
       position: relative; }
       .section-stages .time-block .time-number:after {
         content: '';
@@ -4340,7 +4351,7 @@ html.si-lock2 {
     .section-stages .time-block .time-text {
       display: inline-block;
       color: #d9716f;
-      font: 500 48px/48px "Futura";
+      font: 500 48px/48px "Montserrat";
       -webkit-transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
@@ -4352,7 +4363,7 @@ html.si-lock2 {
   .section-stages h2 {
     width: 660px;
     color: #1b1b1b;
-    font: 500 60px/60px "Futura";
+    font: 500 60px/60px "Montserrat";
     margin-bottom: 40px; }
     @media all and (max-width: 750px) {
       .section-stages h2 {
@@ -4360,7 +4371,7 @@ html.si-lock2 {
   .section-stages .sub_title {
     width: 810px;
     color: #333333;
-    font: 500 24px/36px "Futura";
+    font: 500 24px/36px "Montserrat";
     margin-bottom: 90px; }
     @media all and (max-width: 750px) {
       .section-stages .sub_title {
@@ -4371,7 +4382,7 @@ html.si-lock2 {
   .section-stages .stages-title {
     width: 760px;
     color: #1b1b1b;
-    font: 500 48px/48px "Futura";
+    font: 500 48px/48px "Montserrat";
     margin-bottom: 20px; }
     @media all and (max-width: 750px) {
       .section-stages .stages-title {
@@ -4381,7 +4392,7 @@ html.si-lock2 {
   .section-stages .stages-text {
     width: 790px;
     color: #333333;
-    font: 500 18px/24px "Futura";
+    font: 500 18px/24px "Montserrat";
     margin-bottom: 50px; }
     @media all and (max-width: 750px) {
       .section-stages .stages-text {
@@ -4441,10 +4452,10 @@ html.si-lock2 {
         display: none; } }
   .section-victory h2 {
     color: #fff;
-    font: 500 90px/90px "Futura"; }
+    font: 500 90px/90px "Montserrat"; }
     @media all and (max-width: 750px) {
       .section-victory h2 {
-        font: 500 74px/74px "Futura"; } }
+        font: 500 74px/74px "Montserrat"; } }
 
 .section-map .map-holder {
   height: 579px; }
@@ -4481,7 +4492,7 @@ html.si-lock2 {
     left: 43%; }
   .section-map .map-block .map-text {
     color: #ffffff;
-    font: 300 18px/18px "Futura";
+    font: 300 18px/18px "Montserrat";
     margin-bottom: 17px; }
     .section-map .map-block .map-text.tel {
       width: 100%;
@@ -4493,7 +4504,7 @@ html.si-lock2 {
     display: inline-block;
     color: #ffffff !important;
     text-decoration: underline !important;
-    font: 500 18px/18px "Futura";
+    font: 500 18px/18px "Montserrat";
     margin-right: 32px;
     background: transparent !important; }
     .section-map .map-block .white-link:hover {
@@ -4508,11 +4519,11 @@ html.si-lock2 {
       padding-bottom: 100px; } }
   .section-dear h2 {
     color: #1b1b1b;
-    font: 500 48px/48px "Futura";
+    font: 500 48px/48px "Montserrat";
     margin-bottom: 50px; }
   .section-dear .dear-text {
     color: #333333;
-    font: 500 18px/30px "Futura"; }
+    font: 500 18px/30px "Montserrat"; }
 
 .section-form {
   background: no-repeat 50% 50% transparent; }
@@ -4536,65 +4547,215 @@ html.si-lock2 {
 .red-button-modal {
   width: 256px;
   height: 80px;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   background-color: #d9716f;
-  text-align: center;
   color: #fff !important;
-  font: 500 16px/80px "Futura";
+  font: 500 16px/normal "Montserrat";
   text-transform: uppercase;
   letter-spacing: 1.6px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-  .red-button-modal:hover {
-    background-color: #fff;
-    border: 1px solid #d9716f;
-    color: #d9716f !important; }
-  @media all and (max-width: 750px) {
-    .red-button-modal {
-      width: 100%; } }
+  box-sizing: border-box;
+  padding: 10px;
+}
+.red-button-modal:hover {
+  background-color: #fff;
+  border: 1px solid #d9716f;
+  color: #d9716f !important; 
+}
+@media all and (max-width: 750px) {
+  .red-button-modal {
+    width: 100%; 
+  } 
+}
+.red-button-modal .button-icon {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+}
+@media all and (max-width: 750px) {
   .red-button-modal .button-icon {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin-top: 3px;
-    fill: #fff;
-    position: absolute;
-    top: -10px;
-    left: 24px; }
-    @media all and (max-width: 750px) {
-      .red-button-modal .button-icon {
-        display: none; } }
-  .red-button-modal .button-text {
-    width: 170px;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 15px;
-    margin-top: -26px; }
-  .red-button-modal .desc-text {
-    display: block;
-    width: 100%;
-    font: 500 13px/13px "Futura";
-    color: #a25151;
-    margin-top: -55px;
-    text-transform: none; }
-  .red-button-modal:hover {
-    background-color: #fff;
-    border: 1px solid #d9716f; }
-    .red-button-modal:hover .button-text {
-      color: #d9716f !important; }
-    .red-button-modal:hover .button-icon {
-      fill: #d9716f; }
+    display: none; 
+  } 
+}
+.red-button-modal .button-text {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.red-button-modal .desc-text {
+  width: 100%;
+  font: 500 13px/13px "Montserrat";
+  color: #a25151;
+  text-transform: none;
+  margin-top: 5px;
+  text-align: center;
+}
+.red-button-modal:hover {
+  background-color: #fff;
+  border: 1px solid #d9716f; 
+}
+.red-button-modal:hover .button-text {
+  color: #d9716f !important; 
+}
+.red-button-modal:hover .button-icon {
+  fill: #d9716f; 
+}
 
 .form-agree {
   vertical-align: top; }
   .form-agree .checkbox-label, .form-agree .radio-label {
     color: #1b1b1b;
-    font: 500 18px/18px "Futura"; }
+    font: 500 18px/18px "Montserrat"; }
     .form-agree .checkbox-label .red-link, .form-agree .radio-label .red-link {
       color: #d9716f;
-      font: 500 18px/18px "Futura";
+      font: 500 18px/18px "Montserrat";
       text-decoration: underline;
       display: inline-block; }
 
-/*# sourceMappingURL=style.css.map */
+/* Forms and Buttons */
+.send-form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+}
+
+.send-form__input {
+  width: 100%;
+  height: 64px;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  border: 2px solid #1b1b1b;
+  color: #1b1b1b;
+  font: 500 18px/64px "Montserrat";
+  -webkit-appearance: none;
+  display: block;
+}
+
+.send-form__input:focus {
+  outline: none;
+  border-color: #1b1b1b;
+}
+
+.send-form__button {
+  width: 300px;
+  height: 80px;
+  display: block;
+  background-color: #d9716f;
+  text-align: center;
+  color: #fff !important;
+  font: 500 16px/80px "Montserrat";
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-form__button:hover {
+  background-color: #fff;
+  border: 1px solid #d9716f;
+  color: #d9716f !important;
+}
+
+.send-form__button:disabled {
+  background-color: #ccc;
+  border: none;
+  color: #fff !important;
+  cursor: not-allowed;
+}
+
+.send-form__message {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+
+.send-form__message--success {
+  display: block;
+}
+
+.send-form__message--error {
+  display: block;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Form validation */
+.send-form__input.error {
+  border-color: #dc3545;
+}
+
+.send-form__error-message {
+  display: none;
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.send-form__input.error + .send-form__error-message {
+  display: block;
+}
+
+/* Loading state */
+.send-form__button--loading {
+  position: relative;
+  color: transparent;
+}
+
+.send-form__button--loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: -0.625rem 0 0 -0.625rem;
+  border: 2px solid #fff;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Form radio buttons layout */
+.section-payment .payment-container .calc__group--input {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.section-payment .payment-container .calc__group--input .radio-group {
+  width: calc(50% - 10px);
+  position: relative;
+  padding-left: 40px;
+  color: #1b1b1b;
+  font: 500 24px/24px "Montserrat";
+}
+
+@media all and (max-width: 750px) {
+  .section-payment .payment-container .calc__group--input .radio-group {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

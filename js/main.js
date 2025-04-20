@@ -117,27 +117,6 @@ jQuery(function ($) {
             vimeo: {}
         });
 
-        //Forms
-        $('.send-form').SIForms({
-            'validateFields': {
-                // 'client_name': 'Укажите ваше имя',
-                // 'client_fio': 'Укажите вашу фамилию',
-                // 'client_phone': 'Укажите ваш телефон',
-                // 'client_mail': 'Укажите ваш e-mail'
-            },
-            // 'checkExtra': function (form) {
-            //     if (!$(form).find('.form-agree-check').hasClass('checked')) {
-            //         SIPageMessages.show('Для отправки формы вы должны согласиться на обработку персональных данных.');
-            //         return false;
-            //     }
-            // },
-            'sendSuccess': function (res) {
-                //grecaptcha.reset(recaptcha);
-                //yaCounter.reachGoal('target' + res.id);
-                //ga('send', 'event', res.gcode, res.gcode);
-            }
-        });
-
         //Jump links
         $('.si-jump').SIJump();
 
@@ -217,85 +196,29 @@ jQuery(function ($) {
         },
     });
 
-    // let slideText = {
-    //     0 : '01',
-    //     1 : '01',
-    //     2 : '02',
-    //     3 : '03',
-    //     4 : '04',
-    //     5 : '05',
-    //     6 : '06',
-    //     7 : '07',
-    //     8 : '08',
-    //     9 : '09'
-    // }
-    // let outNext = $('.out-next-slide');
-    //
-    // if($('html').find('.swiper-wrapper')){
-    //     var stepSlider = new Swiper('.payment-container', {
-    //         slidesPerView: 1,
-    //         spaceBetween: 20,
-    //         autoHeight: 'true',
-    //          lazy: {
-    //              loadPrevNext: true,
-    //          },
-    //         pagination: {
-    //             el: '.payment-pagination',
-    //             clickable: true,
-    //             renderBullet: function (index, className) {
-    //                 return '<span class="' + className + '">' + (index + 1) + '</span>';
-    //             },
-    //         },
-    //         navigation: {
-    //             nextEl: '.swiper-button-next',
-    //             prevEl: '.swiper-button-prev',
-    //         },
-    //         loop: true,
-    //         on: {
-    //             slideChange: function() {
-    //                 $.ionSound.play('wuf-1');
-    //                 var realIndex = (this.activeIndex - 1) % (this.slides.length - 2); //номер слайдера
-    //
-    //                 switch(realIndex) {
-    //                     case 0:
-    //                         outNext.text(slideText[1]);
-    //                         break;
-    //                     case 1:
-    //                         outNext.text(slideText[2]);
-    //                         break;
-    //                     case 2:
-    //                         outNext.text(slideText[3]);
-    //                         break;
-    //                     case 3:
-    //                         outNext.text(slideText[4]);
-    //                         break;
-    //                     case 4:
-    //                         outNext.text(slideText[5]);
-    //                         break;
-    //                     case 5:
-    //                         outNext.text(slideText[6]);
-    //                         break;
-    //                     case 6:
-    //                         outNext.text(slideText[7]);
-    //                         break;
-    //                     case 7:
-    //
-    //                         outNext.text(slideText[8]);
-    //                         break;
-    //                     case 8:
-    //                         outNext.text(slideText[9]);
-    //                         break;
-    //                      case -1:
-    //                          outPrev.text(slideText[5]);
-    //                          outNext.text(slideText[0]);
-    //                          break;
-    //                 }
-    //
-    //             }
-    //         }
-    //     });
-    // }
+    // Initialize Swiper without swipe
+    var formSwiper = new Swiper('.payment-container', {
+        allowTouchMove: false,
+        noSwiping: true,
+        noSwipingClass: 'swiper-no-swiping',
+        preventInteractionOnTransition: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.payment-pagination',
+            type: 'fraction',
+        }
+    });
 
+    // Add no-swiping class to all slides
+    $('.payment-container .swiper-slide').addClass('swiper-no-swiping');
+
+    // Auto-advance slides on radio selection
+    $("input[type='radio']").change(function() {
+        formSwiper.slideNext();
+    });
 
     // =====================================================dotdotdot
     $('.ellipsis').dotdotdot();
